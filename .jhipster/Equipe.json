@@ -1,0 +1,53 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "lider",
+            "otherEntityName": "user",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "lastname",
+            "ownerSide": true
+        },
+        {
+            "relationshipName": "membros",
+            "otherEntityName": "user",
+            "relationshipType": "many-to-many",
+            "ownerSide": true
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "nome",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": "20"
+        },
+        {
+            "fieldName": "descricao",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": "200"
+        },
+        {
+            "fieldName": "ativo",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "dataCriacao",
+            "fieldType": "ZonedDateTime",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "changelogDate": "20170208223829",
+    "dto": "no",
+    "service": "serviceClass",
+    "entityTableName": "equipe",
+    "pagination": "pagination"
+}
